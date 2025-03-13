@@ -28,8 +28,12 @@ jobs:
     steps:
       
       - name: "Print Debug Value"
-        run: echo "Debug ${{ inputs.debug }}"
-      
+        run: |
+          echo "Debug ${{ inputs.debug }}"
+          echo "fail ${{ inputs.fail }}"
+
+
+
       - name: "[Debug] Print Debug Info"
         if: inputs.debug == true
         run: |
