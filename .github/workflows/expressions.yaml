@@ -26,6 +26,10 @@ jobs:
       JOB_VAR: 'This is a job-level variable'
       OVERWRITTEN: 'Overwritten at job level'
     steps:
+      
+      - name: "Print Debug Value"
+        run: echo "Debug ${{ inputs.debug }}"
+      
       - name: "[Debug] Print Debug Info"
         if: inputs.debug == true
         run: |
