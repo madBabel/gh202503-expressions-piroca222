@@ -61,7 +61,7 @@ jobs:
         run: |
           echo "PR Title: ${{ github.event.pull_request.title }}"
           echo "PR Labels:"
-          echo '${{ toJSON(github.event.pull_request.labels) }}'
+          echo "${{ toJSON(github.event.pull_request.labels) }}"
       
       - name: "Bug Check"
         if: github.event.pull_request.title && contains(github.event.pull_request.title, 'fix')
